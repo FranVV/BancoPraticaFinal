@@ -16,7 +16,7 @@ public class Menus {
 
     public static int menu1() {
         int n = 0;
-        while (n >= 0 && n <= 7) {
+        while (n <= 0 && n <= 7) {
             try {
                 Scanner leer = new Scanner(System.in);
                 System.out.println(".............................................");
@@ -30,7 +30,41 @@ public class Menus {
                 System.out.println(".............................................");
                 n = leer.nextInt();
             }catch(Exception ex){
-                System.err.println("Has introducido valores no salidos");
+                System.err.println("Has introducido valores no validos");
+            }
+        }
+        return n;
+    }
+    public static int menu2() {
+        int n = 0;
+        while (n <= 0 && n <= 3) {
+            try {
+                Scanner leer = new Scanner(System.in);
+                System.out.println(".............................................");
+                System.out.println(" 1.Cuenta de Ahorro.");
+                System.out.println(" 2.Cuenta coriente.");
+                System.out.println(" 3.Salir.");
+                System.out.println(".............................................");
+                n = leer.nextInt();
+            }catch(Exception ex){
+                System.err.println("Has introducido valores no validos");
+            }
+        }
+        return n;
+    }
+    public static int menu3() {
+        int n = 0;
+        while (n <= 0 && n <= 3) {
+            try {
+                Scanner leer = new Scanner(System.in);
+                System.out.println(".............................................");
+                System.out.println(" 1.Cuenta coriente persona.");
+                System.out.println(" 2.Cuenta coriente empresa.");
+                System.out.println(" 3.Salir.");
+                System.out.println(".............................................");
+                n = leer.nextInt();
+            }catch(Exception ex){
+                System.err.println("Has introducido valores no validos");
             }
         }
         return n;

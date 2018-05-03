@@ -14,9 +14,9 @@ import java.util.HashMap;
 public  final class CuentaCorientePersona extends CuentaCoriente{
      private double Comisionmantenimiento;
 
-    public CuentaCorientePersona(double Comisionmantenimiento, HashMap Listaentidades, Persona titular, double saldoActual, String numeroCuenta) {
+    public CuentaCorientePersona(HashMap Listaentidades, Persona titular, double saldoActual, String numeroCuenta) {
         super(Listaentidades, titular, saldoActual, numeroCuenta);
-        this.Comisionmantenimiento = Comisionmantenimiento;
+        this.Comisionmantenimiento = 0.002;
     }
 
     @Override

@@ -11,9 +11,9 @@ package Calses;
  * @author alumno
  */
 public abstract class CuentaBancaria implements Interfaz.Interzace{
-    protected Persona titular;
-    protected double saldoActual;
-    protected String numeroCuenta;
+    private Persona titular;
+    private double saldoActual;
+    private String numeroCuenta;
 
     public CuentaBancaria(Persona titular) {
         this.titular = titular;
@@ -28,7 +28,49 @@ public abstract class CuentaBancaria implements Interfaz.Interzace{
 
     @Override
     public String imprimible() {
-        return "titular=" + titular + ", saldoActual=" + saldoActual + ", numeroCuenta=" + numeroCuenta;
+        return "titular=" + getTitular() + ", saldoActual=" + getSaldoActual() + ", numeroCuenta=" + getNumeroCuenta();
+    }
+
+    /**
+     * @return the titular
+     */
+    public Persona getTitular() {
+        return titular;
+    }
+
+    /**
+     * @param titular the titular to set
+     */
+    public void setTitular(Persona titular) {
+        this.titular = titular;
+    }
+
+    /**
+     * @return the saldoActual
+     */
+    public double getSaldoActual() {
+        return saldoActual;
+    }
+
+    /**
+     * @param saldoActual the saldoActual to set
+     */
+    public void setSaldoActual(double saldoActual) {
+        this.saldoActual = saldoActual;
+    }
+
+    /**
+     * @return the numeroCuenta
+     */
+    public String getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    /**
+     * @param numeroCuenta the numeroCuenta to set
+     */
+    public void setNumeroCuenta(String numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
     }
     
     

@@ -12,7 +12,7 @@ import java.util.HashMap;
  * @author alumno
  */
 public abstract class CuentaCoriente extends CuentaBancaria {
-    protected HashMap Listaentidades;
+    protected HashMap <Integer, String>Listaentidades;
 
     public CuentaCoriente(HashMap Listaentidades, Persona titular, double saldoActual, String numeroCuenta) {
         super(titular, saldoActual, numeroCuenta);

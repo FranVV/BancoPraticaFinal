@@ -9,11 +9,11 @@ package Calses;
  * @author alumno
  */
 public  final class CuentaAhorro extends CuentaBancaria{
-    private String Tipointerés;
+    private double Tipointerés;
 
-    public CuentaAhorro(String Tipointerés, Persona titular, double saldoActual, String numeroCuenta) {
+    public CuentaAhorro( Persona titular, double saldoActual, String numeroCuenta) {
         super(titular, saldoActual, numeroCuenta);
-        this.Tipointerés = Tipointerés;
+        this.Tipointerés = 0.03;
     }
     @Override
     public String imprimible() {
@@ -23,14 +23,14 @@ public  final class CuentaAhorro extends CuentaBancaria{
     /**
      * @return the Tipointerés
      */
-    public String getTipointerés() {
+    public double getTipointerés() {
         return Tipointerés;
     }
 
     /**
      * @param Tipointerés the Tipointerés to set
      */
-    public void setTipointerés(String Tipointerés) {
+    public void setTipointerés(double Tipointerés) {
         this.Tipointerés = Tipointerés;
     }
     
