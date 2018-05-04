@@ -17,7 +17,7 @@ public  final class CuentaAhorro extends CuentaBancaria{
     }
     @Override
     public String imprimible() {
-        return super.imprimible()+"Tipo de interes= "+ getTipointerés();
+        return super.imprimible()+" Tipo de interes= "+ getTipointerés();
     }
 
     /**

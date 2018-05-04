@@ -15,15 +15,15 @@ public  final class CuentaCorienteEmpresa extends CuentaCoriente {
     private double Tipointerésdescubierto;
     private double Máximodescubiertopermitido;
 
-    public CuentaCorienteEmpresa(double Tipointerésdescubierto, double Máximodescubiertopermitido, HashMap Listaentidades, Persona titular, double saldoActual, String numeroCuenta) {
+    public CuentaCorienteEmpresa( HashMap Listaentidades, Persona titular, double saldoActual, String numeroCuenta) {
         super(Listaentidades, titular, saldoActual, numeroCuenta);
-        this.Tipointerésdescubierto = Tipointerésdescubierto;
-        this.Máximodescubiertopermitido = Máximodescubiertopermitido;
+        this.Tipointerésdescubierto = 5.5;
+        this.Máximodescubiertopermitido = 8000;
     }
 
     @Override
     public String imprimible() {
-        return super.imprimible()+"Tipo de interés descubierto= "+getTipointerésdescubierto() +", Máximo descubierto permitido= " + getMáximodescubiertopermitido(); //To change body of generated methods, choose Tools | Templates.
+        return super.imprimible()+" Tipo de interés descubierto= "+getTipointerésdescubierto() +", Máximo descubierto permitido= " + getMáximodescubiertopermitido(); //To change body of generated methods, choose Tools | Templates.
         
     }
 

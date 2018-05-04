@@ -21,7 +21,7 @@ public  final class CuentaCorientePersona extends CuentaCoriente{
 
     @Override
     public String imprimible() {
-        return super.imprimible()+"Comision de mantenimiento= "+getComisionmantenimiento(); //To change body of generated methods, choose Tools | Templates.
+        return super.imprimible()+" Comision de mantenimiento= "+getComisionmantenimiento(); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

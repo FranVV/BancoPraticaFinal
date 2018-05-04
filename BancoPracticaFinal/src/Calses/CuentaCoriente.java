@@ -21,7 +21,7 @@ public abstract class CuentaCoriente extends CuentaBancaria {
 
     @Override
     public String imprimible() {
-        return super.imprimible()+"Lista Entidades= "+getListaentidades();
+        return super.imprimible()+" Lista Entidades= "+getListaentidades();
     }
 
     /**

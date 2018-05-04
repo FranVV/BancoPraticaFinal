@@ -7,6 +7,7 @@ package bancopracticafinal;
 
 import Calses.CuentaAhorro;
 import Calses.CuentaBancaria;
+import Calses.CuentaCorienteEmpresa;
 import Calses.CuentaCorientePersona;
 import Calses.Persona;
 import java.util.ArrayList;
@@ -28,14 +29,21 @@ public class BancoPracticaFinal {
                     vCuentasbancarias.add(datosPersonaCuenta(datosPersona()));
                     break;
                 case 2://Ver un listado de las cuentas disponibles (código de cuenta, titular y saldo actual).
+                    for (int i = 0; i < vCuentasbancarias.size(); i++) {
+                        System.out.println(vCuentasbancarias.get(i).imprimible());
+                    }
                     break;
                 case 3://Obtener los datos de una cuenta concreta.
+                    
                     break;
                 case 4://Realizar un ingreso en una cuenta.
+                    
                     break;
                 case 5://Retirar efectivo de una cuenta.
+                    
                     break;
                 case 6://Consultar el saldo actual de una cuenta
+                    
                     break;
                 case 7://salir 
                     bandera = false;
@@ -67,7 +75,6 @@ public class BancoPracticaFinal {
         while (bandera) {
             switch (Menu.Menus.menu2()) {
                 case 1://CuentaAhorro
-                   
                     System.out.println("Dime el saldo Actual de la persona");
                     vString.add(leer.nextLine());
                     System.out.println("Dime el Numero de cuenta de la persona");
@@ -90,7 +97,12 @@ public class BancoPracticaFinal {
                                 CuentaBancaria cBCPNueva = new CuentaCorientePersona(Listaentidades, nuevaP, Double.parseDouble(vString.get(0)), vString.get(1));
                                 return cBCPNueva;
                             case 2://Cuenta coriente empresa.
-                                break;
+                                 System.out.println("Dime el saldo Actual de la persona");
+                                vString.add(leer.nextLine());
+                                System.out.println("Dime el Numero de cuenta de la persona");
+                                vString.add(leer.nextLine());
+                                CuentaBancaria cBCENueva = new CuentaCorienteEmpresa(Listaentidades, nuevaP,Double.parseDouble(vString.get(0)), vString.get(1));
+                                return cBCENueva;
                             case 3://salir
                                 aux= false;
                                 break;

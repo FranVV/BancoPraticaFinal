@@ -28,9 +28,11 @@ public abstract class CuentaBancaria implements Interfaz.Interzace{
 
     @Override
     public String imprimible() {
-        return "titular=" + getTitular() + ", saldoActual=" + getSaldoActual() + ", numeroCuenta=" + getNumeroCuenta();
+        return " titular=" + nombreTitular() + ", saldoActual=" + getSaldoActual() + ", numeroCuenta=" + getNumeroCuenta();
     }
-
+    public String nombreTitular() {
+        return titular.getNombre();
+    }
     /**
      * @return the titular
      */
