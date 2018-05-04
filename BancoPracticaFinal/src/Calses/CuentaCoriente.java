@@ -6,6 +6,9 @@
 package Calses;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -21,9 +24,32 @@ public abstract class CuentaCoriente extends CuentaBancaria {
 
     @Override
     public String imprimible() {
-        return super.imprimible()+" Lista Entidades= "+getListaentidades();
+        return super.imprimible()+" Lista Entidades= "+imprimirListaEntidades();
     }
-
+    
+    public  String imprimirListaEntidades() {
+        String aux="";
+        
+        /*
+        for (Map.Entry<Integer, String> a:Listaentidades.entrySet()) {
+                aux+=a.getValue();
+        }
+        
+        Set claves = Listaentidades.keySet();
+        Object vAux1[] = claves.toArray();
+        for (Object i: vAux1){
+            aux+= Listaentidades.get((int)i);
+        }
+       */
+         Set claves = Listaentidades.keySet();
+        Iterator i = claves.iterator();
+       // Iterator e;
+        while (i.hasNext()) {            
+       aux+=Listaentidades.get((int)i.next());
+        }
+        
+        return aux;
+    }
     /**
      * @return the Listaentidades
      */
